@@ -13,8 +13,8 @@
         var result = {};
         nx.forIn(
           inActionCreators,
-          function(key, value) {
-            result[key] = this.bind(value, inDispatch);
+          function(key, actionCreator) {
+            result[key] = this.bind(actionCreator, inDispatch);
           },
           this
         );
