@@ -29,5 +29,8 @@ const actionCreators = {
 };
 
 // use binds:
-NxActionCreator.binds(actionCreators, store.dispatch)
+const actions = NxActionCreator.binds(actionCreators, store.dispatch)
+
+// dispatch by functional:
+actions.memory({ test: 123 })
 ```
