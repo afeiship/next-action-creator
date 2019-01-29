@@ -16,21 +16,21 @@ npm install -S afeiship/next-action-creator --registry=https://registry.npm.taob
 ## usage:
 ```js
 import NxActionCreator from 'next-action-creator';
-import {createStore} from 'redux';
+import { createStore } from 'redux';
 
 const store = createStore(/* YOUR OPTIONS */);
 const actionCreators = {
-  memory: function(inData){
+  memory: function(inData) {
     return {
-      type:'memory',
-      data:inData
-    }
+      type: 'memory',
+      data: inData
+    };
   }
 };
 
 // use binds:
-const actions = NxActionCreator.binds(actionCreators, store.dispatch)
+const actions = NxActionCreator.binds(actionCreators, store.dispatch);
 
 // dispatch by functional:
-actions.memory({ test: 123 })
+actions.memory({ test: 'hello redux' });
 ```
